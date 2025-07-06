@@ -2,15 +2,8 @@ import express from "express";
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-app.get("/hello", (req, res) => {
-  res.send("welcome");
-});
-
-app.get("/api", (req, res) => {
-  const API = [
+app.get("/api/university", (req, res) => {
+  const university = [
     {
       domains: ["marywood.edu"],
       country: "United States",
@@ -84,7 +77,7 @@ app.get("/api", (req, res) => {
       alpha_two_code: "US",
     },
   ];
-  res.send(API);
+  res.send(university);
 });
 
 const PORT = process.env.PORT || 3000;
